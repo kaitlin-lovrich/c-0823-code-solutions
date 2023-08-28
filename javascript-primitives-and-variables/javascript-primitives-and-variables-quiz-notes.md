@@ -11,7 +11,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - How do you initialize (**assign a value to**) a variable?
   use the asignment operator =
 - What characters are allowed in variable names?
-  letters, digits, or the symbols $ and \_
+  letters, digits, or the symbols $ and \_, cannot start with a number
 - What does it mean to say that variable names are "case sensitive"?
   Variables named apple and APPLE are two different variables.
 - What is the purpose of a string?
@@ -29,7 +29,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - Why is it a good habit to include "labels" when you log values to the browser console?
   For clarity of what your are testing
 - Give five examples of JavaScript primitives.
-  undefined, null, numbers, strings, variables
+  undefined, null, numbers, strings, boolean, symbol
 
 ## Notes
 
