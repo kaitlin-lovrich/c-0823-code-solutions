@@ -58,3 +58,7 @@ div {
   width: 100%;
 }
 ```
+
+let to initialize and declare variables whos values change
+const for those do not change
+var gets hoisted to the top
