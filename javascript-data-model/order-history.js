@@ -57,3 +57,5 @@ const orderHistory = [
     ],
   },
 ];
+
+console.log(orderHistory[3]['July 5, 2020'][1].title);
