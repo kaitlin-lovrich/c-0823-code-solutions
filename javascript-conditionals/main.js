@@ -51,10 +51,8 @@ function introduceWarnerBro(name) {
     case 'yakko':
     case 'wakko':
       return "We're the warner brothers!";
-      break;
     case 'dot':
       return "I'm cute~";
-      break;
     default:
       return 'Goodnight everybody!';
   }
@@ -63,17 +61,18 @@ function introduceWarnerBro(name) {
 function recommendMovie(genre) {
   switch (genre) {
     case 'action':
+      return '007';
     case 'comedy':
-    case 'drama':
-    case 'musical':
-    case 'sci-fi':
       return 'The Spongebob Squarepants Movie';
-      break;
+    case 'drama':
+      return 'Twilight';
+    case 'musical':
+      return 'The Phantom of the Opera';
+    case 'sci-fi':
+      return 'Synchronic';
     case 'Horror':
       return 'Insideous';
-      break;
     default:
       return 'Genre not recognized. Choose between action, comedy, horror, drama, musical, or sci-fi';
-      break;
   }
 }
