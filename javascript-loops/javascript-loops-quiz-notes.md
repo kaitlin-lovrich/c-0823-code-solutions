@@ -11,7 +11,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What does "iteration" mean in the context of loops?
   each time the code block in a loop runs
 - _When_ does the **condition** expression of a `while` loop get evaluated?
-  first
+  After the initialization expression
 - _When_ does the **initialization** expression of a `for` loop get evaluated?
   first when entering the loop
 - _When_ does the **condition** expression of a `for` loop get evaluated?
