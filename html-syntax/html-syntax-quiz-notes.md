@@ -11,7 +11,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   Attributes contain extra information about the element that won't appear in the content
 
 - Give an example of an HTML entity (escape character).
-  <br> line break
+  &copy; © (CopyRight Symbol)
 
 ## Notes
 
