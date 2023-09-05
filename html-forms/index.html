@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <header>
+      <h1>Coding Form!</h1>
+    </header>
+    <main>
+      <form>
+        <ul>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="user-email" />
+          </li>
+          <li>
+            <label for="why-coding">Why is coding cool?</label>
+            <div>
+              <select name="why" id="why-coding">
+                <option>Select an option</option>
+                <option>Because it's interesting</option>
+                <option>Because it's fun</option>
+                <option>Because it's powerful</option>
+              </select>
+            </div>
+          </li>
+          <li>
+            <fieldset>
+              <legend>Favorite Language (choose one)</legend>
+              <ul>
+                <li>
+                  <label for="HTML">HTML</label>
+                  <input type="radio" id="HTML" name="language" value="HTML" />
+                </li>
+                <li>
+                  <label for="CSS">CSS</label>
+                  <input type="radio" id="CSS" name="language" value="CSS" />
+                </li>
+                <li>
+                  <label for="JavaScript">JavaScript</label>
+                  <input
+                    type="radio"
+                    id="JavaScript"
+                    name="language"
+                    value="Javascript" />
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>Would you like to sign up for more information?</legend>
+              <ul>
+                <li>
+                  <label for="sign-up">Sign me up!</label>
+                  <input
+                    type="checkbox"
+                    id="sign-up"
+                    name="sign-up"
+                    value="sign-up" />
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <label for="comments">Comments</label>
+            <input type="text" id="comments" name="comments" />
+          </li>
+        </ul>
+        <button type="submit" value="Submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
