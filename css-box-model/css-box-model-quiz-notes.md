@@ -42,3 +42,12 @@ div {
 max-width: 100%, and its intrinsic width is smaller than its container, the image will not be forced to stretch and become larger, thus preventing pixelation.
 
 list-style: none; gets rid of the bullet points
+
+{box-sizing: border-box} changes the actual content size when the padding size is changed
+border box changes the size of the entire box
+
+{box-sizing: content-box} changes the width of the content when the padding size is changed
+content box changes the size of just the content
+
+{margin: 0 auto;} <- how to center content
+width: 30px; has to be used with width
