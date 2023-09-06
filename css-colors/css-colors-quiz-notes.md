@@ -34,3 +34,11 @@ div {
   width: 100%;
 }
 ```
+
+:root {
+variable-color-name : #44FE
+}
+
+p {
+background : var(variable-color-name);
+}
