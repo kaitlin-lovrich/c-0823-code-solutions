@@ -1,0 +1,25 @@
+button {
+  box-sizing: border-box;
+  padding: 10px 5px;
+}
+
+button:hover {
+  background-color: #000;
+  font: bold;
+  color: #d2d2d2;
+  cursor: pointer;
+}
+
+caption {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+th {
+  background-color: #000;
+  color: #d2d2d2;
+}
+
+tr:nth-child(odd) {
+  background-color: #d2d2d2;
+}
