@@ -1,0 +1,14 @@
+* {
+  width: 800px;
+}
+
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+  line-height: 3em;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 3em;
+}
