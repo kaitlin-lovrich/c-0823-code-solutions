@@ -9,10 +9,10 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - What is the default `flex-direction` of an element with `display: flex`?
   In the direction of the text. Left to right
-
+  Class said 'row'
 - What are the three primary components of a page layout? (Which helper classes do you need?)
-  Header, Body, and Footer.
-  Container, column, row, and column-number indicating how many columns in a row.
+  Container, column, row,
+  (and column-number indicating how many columns in a row.)
 
 - What is the minimum number of **columns** that you should put in a **row**?
   1
