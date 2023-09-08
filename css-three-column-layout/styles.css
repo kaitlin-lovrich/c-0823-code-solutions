@@ -5,6 +5,12 @@
   background-color: #1996da;
   color: #fff;
   padding: 50px 200px;
+  font-family: Lato, sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 400;
 }
 
 .row {
