@@ -1,6 +1,12 @@
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  color: #a0a0a0;
+  font: 18px Avenir, sans-serif;
+}
+
+.header {
+  border-bottom: 1px solid #a0a0a0;
 }
 
 .display-flex {
@@ -21,4 +27,40 @@
 
 .flex-direction-row {
   flex-direction: row;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.active {
+  background-color: #294464;
+  color: #fff;
+}
+
+.canvas {
+  font: 40px 'Tiempos Headline', serif;
+  color: #294464;
+}
+
+ul {
+  width: 600px;
+  list-style-type: none;
+}
+
+li {
+  padding: 15px;
+  border-radius: 4px;
 }
