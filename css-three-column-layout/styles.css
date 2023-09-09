@@ -15,23 +15,26 @@ h2 {
 
 .row {
   display: flex;
-  justify-content: center;
   justify-content: space-between;
 }
 
-.column-full {
-  /* display: flex;
-  justify-self: center;
-  flex-wrap: wrap;
-  flex-direction: row; */
+.justify-center {
+  justify-content: center;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .column-third {
-  /* display: flex;
-  justify-content: space-between;
-  flex-direction: row; */
+  flex-direction: column;
+  flex-basis: calc(100% / 3);
+}
 
-  /* flex-wrap: wrap; */
+.calc-split {
+  flex-basis: calc(100% / 2);
 }
 
 .circle {
@@ -44,4 +47,9 @@ h2 {
 img {
   width: 100%;
   padding: 50px;
+}
+
+h2,
+p {
+  text-align: center;
 }
