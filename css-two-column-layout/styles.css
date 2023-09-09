@@ -18,10 +18,6 @@
 
 .display-flex {
   display: flex;
-
-  /* flex-direction: column; !broke */
-
-  /* justify-content: space-between;  !did nothing */
 }
 
 .column-one-third {
@@ -39,7 +35,8 @@
 
 .column-half {
   flex-basis: calc(100% / 2);
-  flex-wrap: wrap;
+
+  /* flex-wrap: wrap; */
 }
 
 header {
