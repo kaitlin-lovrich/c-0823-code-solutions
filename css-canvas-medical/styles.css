@@ -1,5 +1,5 @@
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   color: #a0a0a0;
   font: 18px Avenir, sans-serif;
@@ -7,10 +7,15 @@
 
 .header {
   border-bottom: 1px solid #a0a0a0;
+  width: 100%;
 }
 
 .display-flex {
   display: flex;
+}
+
+.column {
+  flex-direction: column;
 }
 
 .column-half {
@@ -21,20 +26,20 @@
   flex-basis: calc(200% / 3);
 }
 
-.flex-direction-column {
-  flex-direction: column;
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .flex-direction-row {
   flex-direction: row;
 }
 
-.justify-end {
-  justify-content: flex-end;
+.flex-direction-reverse-row {
+  flex-direction: row-reverse;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-space-between {
@@ -43,6 +48,14 @@
 
 .align-center {
   align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .active {
@@ -55,6 +68,47 @@
   color: #294464;
 }
 
+.canvas-two {
+  font: 40px 'Tiempos Headline', serif;
+  color: #fff;
+  margin-left: 56px;
+}
+
+.background-image {
+  background-image: url('./images/hero.jpg');
+  background-size: cover;
+  max-width: 1200px;
+  color: #fff;
+}
+
+.picture-paragraph {
+  padding: 85px 140px 85px 75px;
+}
+
+.background-light-gray {
+  background-color: #fafafa;
+  color: #6e6e6e;
+}
+
+.background-dark-gray {
+  background-color: #525351;
+  color: #fff;
+}
+
+.row.body {
+  margin: 60px 0;
+}
+
+p.row-3 {
+  max-width: 570px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.prefer-canvas-ul {
+  padding: 50px 0;
+}
+
 ul {
   width: 600px;
   list-style-type: none;
@@ -63,4 +117,28 @@ ul {
 li {
   padding: 15px;
   border-radius: 4px;
+}
+
+p {
+  line-height: 2;
+}
+
+h1 {
+  font: 40px 'Tiempos Headline', serif;
+  max-width: 500px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font: 40px 'Tiempos Headline', serif;
+  max-width: 500px;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #294464;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 4px;
+  margin-top: 30px;
 }
