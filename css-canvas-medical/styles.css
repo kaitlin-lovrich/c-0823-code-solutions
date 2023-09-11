@@ -87,7 +87,7 @@
 .canvas-two {
   font: 40px 'Tiempos Headline', serif;
   color: #fff;
-  margin-left: 56px;
+  margin: 0 56px 15px;
 }
 
 .background-image {
@@ -141,6 +141,27 @@ ul.footer,
 ul.footer > li {
   padding: 0;
   line-height: 2.5;
+  color: #fff;
+}
+
+.footer-address {
+  padding-left: 56px;
+  line-height: 2.5;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+address.footer-address > a,
+ul.footer > li > a {
+  color: white;
+}
+
+ul.sub-footer > li > a {
+  color: #525351;
+  font-weight: 900;
 }
 
 ul {
