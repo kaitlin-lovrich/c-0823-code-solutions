@@ -14,12 +14,24 @@
   display: flex;
 }
 
+.row {
+  display: flex;
+}
+
 .column {
   flex-direction: column;
 }
 
+.column-full {
+  flex-basis: 100%;
+}
+
 .column-half {
   flex-basis: calc(100% / 2);
+}
+
+.column-quarter {
+  flex-basis: 25%;
 }
 
 .column-two-thirds {
@@ -44,6 +56,10 @@
 
 .justify-space-between {
   justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .align-center {
@@ -95,12 +111,15 @@
   color: #fff;
 }
 
+.background-dark-gray.footer {
+  padding: 100px 25px;
+}
+
 .row.body {
   margin: 60px 0;
 }
 
 p.row-3 {
-  max-width: 570px;
   text-align: center;
   margin-bottom: 0;
 }
@@ -109,14 +128,27 @@ p.row-3 {
   padding: 50px 0;
 }
 
-ul {
+ul.nav {
   width: 600px;
-  list-style-type: none;
 }
 
 li {
   padding: 15px;
   border-radius: 4px;
+}
+
+ul.footer,
+ul.footer > li {
+  padding: 0;
+  line-height: 2.5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h3.footer {
+  margin-bottom: 0;
 }
 
 p {
@@ -131,7 +163,6 @@ h1 {
 
 h2 {
   font: 40px 'Tiempos Headline', serif;
-  max-width: 500px;
   margin-bottom: 5px;
 }
 
