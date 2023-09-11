@@ -7,7 +7,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - Why do we log things to the console?
   to test scripts
 - What is a "model"?
-
+  a model is a replica of the html
 - Which "document" is being referred to in the phrase Document Object Model?
   index.html
 - What is the word "object" referring to in the phrase Document Object Model?
