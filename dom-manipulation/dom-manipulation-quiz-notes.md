@@ -13,7 +13,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - How do you update the text within an element using JavaScript?
   element.textContent = 'updated text'
 - Is the `event` parameter of an event listener callback always useful?
-  yes
+  no. sometimes you dont use it
 - Would this assignment be simpler or more complicated if we didn't use a variable to keep track of the number of clicks?
   More complicated
 - Why is storing information about a program in variables better than only storing it in the DOM?
