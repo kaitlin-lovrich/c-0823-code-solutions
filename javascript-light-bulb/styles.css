@@ -1,3 +1,9 @@
+body {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 body.dark {
   background-color: rgb(17, 17, 17);
 }
@@ -9,6 +15,7 @@ body.light {
 button.dark {
   background-color: rgb(37, 37, 37);
   border-radius: 100%;
+  border-style: none;
   padding: 150px;
 }
 
@@ -24,18 +31,6 @@ button.light {
   display: flex;
 }
 
-.column {
-  flex-direction: column;
-}
-
-.column-full {
-  flex-basis: 100%;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .align-center {
   align-items: center;
 }
@@ -44,6 +39,6 @@ button.light {
   justify-content: center;
 }
 
-.text-align {
-  text-align: center;
+.min-height {
+  min-height: 100vh;
 }
