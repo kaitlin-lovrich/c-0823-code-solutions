@@ -1,0 +1,49 @@
+body.dark {
+  background-color: rgb(17, 17, 17);
+}
+
+body.light {
+  background-color: rgb(254, 249, 241);
+}
+
+button.dark {
+  background-color: rgb(37, 37, 37);
+  border-radius: 100%;
+  padding: 150px;
+}
+
+button.light {
+  background-color: rgb(250, 234, 132);
+  border-radius: 100%;
+  border-color: rgb(250, 235, 137);
+  border-style: solid;
+  padding: 150px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-align {
+  text-align: center;
+}
