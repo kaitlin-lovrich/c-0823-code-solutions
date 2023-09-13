@@ -13,9 +13,9 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What event is fired when a user clicks the `"submit"` button within a `<form>`?
   The submit event fires when a form is submitted.
 - What does the `event.preventDefault()` method do?
-
+  The preventDefault() method of the Event interface tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
 - What does submitting a form without `event.preventDefault()` do?
-
+  the default behavior of the browzer will execute
 - What property of a form element object contains all of the form's controls.
   elements property
 - What property of a form control object gets and sets its value?
