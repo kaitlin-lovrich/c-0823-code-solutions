@@ -1,7 +1,6 @@
 .container {
   max-width: 1500px;
   margin: 0 auto;
-  flex-wrap: wrap;
   background-color: #1996da;
   color: #fff;
   padding: 50px 200px;
