@@ -39,3 +39,5 @@ div {
   width: 100%;
 }
 ```
+
+always put your @media queries at the bottom of the page
