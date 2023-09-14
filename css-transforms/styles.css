@@ -33,13 +33,16 @@ button {
 
 button:focus {
   outline: none;
+}
+
+button:active {
   transform: translateY(0.25rem);
 }
 
-.pokeball-wrapper > img.pokeball:first-child {
+.pokeball-wrapper:first-child > img.pokeball {
   transform: rotate(-30deg);
 }
 
-.pokeball-wrapper > img.pokeball:last-child {
+.pokeball-wrapper:last-child > img.pokeball {
   transform: rotate(30deg);
 }
