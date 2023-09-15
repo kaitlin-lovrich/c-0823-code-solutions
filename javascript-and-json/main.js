@@ -25,8 +25,8 @@ console.log('JSON.stringify(booksArray):', jsonBooks);
 console.log('typeof JSON.stringify(booksArray):', typeof jsonBooks);
 
 const jsonNumAndString = `{
-  "Number id": "1",
-  "String name": "Kaitlin"
+  "id": "1",
+  "stringName": "Kaitlin"
 }`;
 
 const parsedJson = JSON.parse(jsonNumAndString);

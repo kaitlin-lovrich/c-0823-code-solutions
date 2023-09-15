@@ -13,9 +13,9 @@ After completing this exercise, you should be able to discuss or answer the foll
   Serialization is useful when you want to transmit data across a network.
   Deserialization is useful when you want to access the data
 - How do you serialize a data structure into a JSON string using JavaScript?
-  JSON.parse()
-- How do you deserialize a JSON string into a data structure using JavaScript?
   The JSON.stringify() static method converts a JavaScript value to a JSON string
+- How do you deserialize a JSON string into a data structure using JavaScript?
+  JSON.parse()
 
 ## Notes
 
