@@ -7,6 +7,8 @@
 - If you introduce CSS rules for a smaller min-width after the styles for a larger min-width in your style sheet, the CSS rules for the smaller min-width will "win". Why is that?
   because rules that appear lower in the css style sheet take precidence
 
+place smaller @media queries such as (min-width: 576px) higher up in the ccs files vs (min-width: 768px).
+
 for "AND" use and(no comma)
 @media screen and (min-width: 600px) and (orientation: landscape) {
 body {
