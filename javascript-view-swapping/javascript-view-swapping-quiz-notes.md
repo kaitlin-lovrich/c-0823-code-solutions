@@ -15,7 +15,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - At what steps of the solution would it be helpful to log things to the console?
   after you create variables to check that they've stored the right data and after your conditionals to check that they're returning a valid boolean
 - If you were to add another tab and view to your HTML, but you didn't use event delegation, how would your JavaScript code be written instead?
-  using a dom creation funtion
+  using an event listeners for every variable
 - If you didn't use a loop to conditionally show or hide the views in the page, how would your JavaScript code be written instead?
   you'd have a variable for each tab element and use if/else statements for each variable to test for the className set to view or view hidden and re-assign according to the data-view attribute whether is matched up with the targetted tab's data-view attribrute
 
