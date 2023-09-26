@@ -11,3 +11,6 @@ console.log(
 
 const obj = new ExampleConstructor();
 console.log('value of obj:', obj);
+
+const objInstance = obj instanceof ExampleConstructor;
+console.log('objInstance instaceof ExampleConstructor:', objInstance);
