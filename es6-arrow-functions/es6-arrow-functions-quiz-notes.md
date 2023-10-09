@@ -35,7 +35,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   - How many arguments are passed to the function `foo`?
     1
   - What type of argument is passed to the function `foo`?
-    arrow function
+    callback function
 
 - In the expression
   ```js
@@ -48,7 +48,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   - How many arguments does the arrow function take?
     1
   - What value does it return?
-    returns a console.log statement
+    returns undefined because its missing a return statment
   - How many arguments are passed to the function `bar`?
     1
   - What type of argument is passed to the function `bar`?
