@@ -9,7 +9,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What is the syntax for `Object` destructuring?
   const {property1, propery2} = object;
   const {property1: variable1, propery2: variable2} = object;
-  ({property1, property2}) = object;
+
 - What is the syntax for `Array` destructuring?
   const [element1, element2] = arrayOf2Elements
   const [element1, element2, ...args] = arrayOf4Elements //args stores an array of 2 elements
