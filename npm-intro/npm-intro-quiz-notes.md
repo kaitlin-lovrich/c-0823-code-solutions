@@ -24,28 +24,14 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 ## Notes
 
-All student notes should be written here.
+Questions answered in class
 
-How to write `Code Examples` in markdown
+Would you include this package.json file in gitignore?
+no, include in your project root folder
 
-for JS:
+Can you remove a dependency using npm?
+npm unistall eslint
+or go to package .json and delete package from json object
 
-```javascript
-const data = 'Howdy';
-```
-
-for HTML:
-
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
-
-for CSS:
-
-```css
-div {
-  width: 100%;
-}
-```
+Is there a syntax to update packages?
+npm update jquery
