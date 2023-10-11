@@ -13,9 +13,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   ?? is the same as || except that the first value must be explicitly undefined
   or null before
 - What is the `?:` (ternary) operator? How does it differ from `if/else`?
-
-it doesnt create a scope whereas if else has a scope
-
+  it doesnt create a scope whereas if else has a scope
 - What is the `?.` (optional chaining) operator? When would you use it?
   it performs the following chained operation only if the property is not null
   useful for not throwing errors if properties do not exist returns null or undefined
@@ -24,7 +22,7 @@ it doesnt create a scope whereas if else has a scope
 - What data types can be spread into an array? Into an object?
   you can only spread iterable into an array, technically you can spread anything into an object
 - How does spread syntax differ from rest syntax?
-  spread inside an object or array
+  spread is used inside an object or array
 
 ## Notes
 
