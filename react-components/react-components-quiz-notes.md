@@ -5,7 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is a React component?
-  React components are JavaScript functions that return markup
+  React components are JavaScript functions that returns jsx markup
 - How do you define a component in React?
   with a function keyword and a variable with a Capital first letter
 - How is a component "rendered" (made visible on the browser page)?
