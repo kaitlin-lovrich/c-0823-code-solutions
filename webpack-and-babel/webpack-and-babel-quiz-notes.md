@@ -16,8 +16,6 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 ## Notes
 
-Questions to ask in class dicussion
-
 babel is a package you install
 
 does not automatically append .json
