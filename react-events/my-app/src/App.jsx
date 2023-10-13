@@ -15,12 +15,21 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <CustomButton color="pink" text="Fancy Button" />
+      <CustomButton
+        color="pink"
+        text="Fancy Button"
+        onCustomClick={() => alert('Fancy Button Clicked')}
+      />
+      <CustomButton
+        color="purple"
+        text="Cuul Cat Button"
+        onCustomClick={() => alert('Cuul Cat Button Clicked')}
+      />
+      <CustomButton
+        color="blue"
+        text="Subarururu Button"
+        onCustomClick={() => alert('Subarururu Button Clicked')}
+      />
     </>
   );
 }
