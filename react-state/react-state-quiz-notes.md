@@ -9,6 +9,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   any function starting with ”use”, is called a Hook
 - What are the "Rules of Hooks"? (if necessary, re-read the "Pitfall" box in [State](https://react.dev/learn/state-a-components-memory))
   can only be called at the top level of your components or your own Hooks. You can’t call Hooks inside conditions, loops, or other nested functions.
+  Must be called on every render
 - What is the purpose of state in React?
   Retain data between renders.
   Update the variable and trigger React to render the component again.

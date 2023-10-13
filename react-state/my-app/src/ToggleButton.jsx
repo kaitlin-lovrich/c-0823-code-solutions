@@ -11,8 +11,9 @@ export default function ToggleButton({ text, color }) {
     console.log('after setter:', isClicked);
   }
 
+  const bckgColor = isClicked ? color : 'aqua';
   return (
-    <button onClick={handleClick} style={{ backgroundColor: color }}>
+    <button onClick={handleClick} style={{ backgroundColor: bckgColor }}>
       {isClicked ? text : 'false'}
     </button>
   );
