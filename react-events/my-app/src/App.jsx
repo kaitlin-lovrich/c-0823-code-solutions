@@ -4,6 +4,10 @@ import './App.css';
 import CustomButton from './CustomButton';
 
 function App() {
+  function handleCustomClick(text) {
+    alert(`Clicked ${text}`);
+  }
+
   return (
     <>
       <div>
@@ -18,17 +22,17 @@ function App() {
       <CustomButton
         color="pink"
         text="Fancy Button"
-        onCustomClick={() => alert('Fancy Button Clicked')}
+        onCustomClick={handleCustomClick}
       />
       <CustomButton
         color="purple"
         text="Cuul Cat Button"
-        onCustomClick={() => alert('Cuul Cat Button Clicked')}
+        onCustomClick={handleCustomClick}
       />
       <CustomButton
         color="blue"
         text="Subarururu Button"
-        onCustomClick={() => alert('Subarururu Button Clicked')}
+        onCustomClick={handleCustomClick}
       />
     </>
   );

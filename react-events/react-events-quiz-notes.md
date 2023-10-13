@@ -11,9 +11,9 @@ After completing this exercise, you should be able to discuss or answer the foll
 - How do you pass an event handler to a React component?
   To add an event handler, you will first define a function and then pass it as a prop to the appropriate JSX tag
 - What is the naming convention for event handlers?
-  they are prepended with 'handle'
+  they are prepended with 'handle' followed by the name of the event
 - What is an "event handler prop"? Which component declares the prop?
-  an event handler prop is an event handler fuction declared inside the component its being called in
+  an event handler prop is a property on the component fuction declared inside the component its being called in
 - What are some custom event handler props a component may wish to define?
   onClick
 - What is the naming convention for custom event handler props?
@@ -38,3 +38,15 @@ export default function Button() {
   return <button onClick={() => alert('You clicked me!')}>Click me</button>;
 }
 ```
+
+```js
+export default function CustomButton({ text, color, onCustomClick }) {
+  return (
+    <button onClick={onCustomClick(text)} className={color}>
+      {text}
+    </button>
+  );
+}
+```
+
+you cannot do ('click', onCustomClick(text)) because it will call it, using the arrow function acts as a middle man
