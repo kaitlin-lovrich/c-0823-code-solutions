@@ -1,0 +1,501 @@
+   62  git status
+   63  git add css-two-column-layout/index.html css-two-column-layout/styles.css 
+   64  git commit -m 'Complete except one horizontal spacing issue between paragraphs'
+   65  git switch main
+   66  git pull origin main
+   67  git switch css-canvas-medical 
+   68  git add css-canvas-medical/index.html 
+   69  git commit -m 'Created html skeleton'
+   70  git status
+   71  git log
+   72  git add css-canvas-medical/
+   73  git status
+   74  git commit -m 'Added all canvas-medical files'
+   75  git status
+   76  git switch css-two-column-layout 
+   77  git log
+   78  git add css-two-column-layout/index.html 
+   79  git commit -m 'Restructured html accoring to Shawns suggestion'
+   80  git add css-two-column-layout/index.html 
+   81  git add css-two-column-layout/index.html 
+   82  git commit -m 'Restructured html accoring to Shawns suggestion'
+   83  git add css-two-column-layout/
+   84  git status
+   85  git commit -m 'Completed css-two-column-layout challenge -Kaitlin Lovrich'
+   86  git push origin css-two-column-layout 
+   87  git switch css-canvas-medical 
+   88  git add css-canvas-medical/
+   89  git status
+   90  git commit -m 'Completed header and styling'
+   91  git switch css-positioning 
+   92  git switch css-canvas-medical 
+   93  git add css-canvas-medical/index.html css-canvas-medical/styles.css 
+   94  git commit -m 'Add all text content to html'
+   95  git add css-canvas-medical/index.html css-canvas-medical/styles.css 
+   96  git commit -m 'Add all text content to html'
+   97  git add css-canvas-medical/index.html css-canvas-medical/styles.css 
+   98  git commit -m 'Styling is complete with a few minor details off from the original in the footer'
+   99  git add css-canvas-medical/index.html css-canvas-medical/styles.css 
+  100  git commit -m 'Fixed footer, broke "Clinicians Prefer Canvas" (row 3)'
+  101  git status
+  102  git switch main
+  103  git branch dom-querying
+  104  git switch dom-querying 
+  105  git add dom-querying/
+  106  git status
+  107  git commit -m 'Completed dom-querying exercise'
+  108  git push origin dom-querying 
+  109  git switch main
+  110  git branch dom-events
+  111  git switch dom-events
+  112  git add dom-events/
+  113  git stash
+  114  git switch dom-querying 
+  115  git add dom-querying/dom-query-quiz-notes.md 
+  116  git commit -m 'Completed missing question.'
+  117  git push origin dom-querying 
+  118  git switch dom-events 
+  119  git stash pop
+  120  git status
+  121  git add dom-events/buttons.js dom-events/dom-events-quiz-notes.md 
+  122  git commit -m 'Completed dom-events exercise'
+  123  git push origin dom-events 
+  124  git switch main
+  125  git branch dom-manipulation
+  126  git switch dom-manipulation 
+  127  git add dom-manipulation/index.html dom-manipulation/main.js dom-manipulation/dom-manipulation-quiz-notes.md 
+  128  git stash
+  129  git stash pop
+  130  git add dom-manipulation/.gitkeep dom-manipulation/styles.css 
+  131  git status
+  132  git stash
+  133  git switch main
+  134  git branch css-four-column-layout
+  135  git switch css-four-column-layout
+  136  git add css-four-column-layout/
+  137  git stash
+  138  git switch dom-manipulation 
+  139  git stash pop
+  140  git status
+  141  git switch css-four-column-layout
+  142  git add css-four-column-layout/
+  143  git status
+  144  git switch main
+  145  git switch dom-manipulation 
+  146  git status
+  147  git add dom-manipulation/
+  148  git status
+  149  git rm css-four-column-layout/
+  150  git rm -R css-four-column-layout 
+  151  git rm -r css-four-column-layout 
+  152  git status
+  153  git status
+  154  git add dom-manipulation/
+  155  git status
+  156  git commit -m 'Completed main.js'
+  157  git status
+  158  git switch css-four-column-layout 
+  159  git add css-four-column-layout/
+  160  git add css-four-column-layout/
+  161  git status
+  162  git stash
+  163  git switch css-canvas-medical 
+  164  git switch css-four-column-layout 
+  165  git stash pop
+  166  git status
+  167  git add css-four-column-layout/
+  168  git status
+  169  git commit -m 'Completed css-four-column layout'
+  170  git push origin css-four-column-layout 
+  171  git switch dom-manipulation 
+  172  git stash pop
+  173  git status
+  174  git push origin dom-manipulation 
+  175  git add effective-css/
+  176  git commit -m 'Added some html and css based off the guidelines provided in effective-css outline' 
+  177  git switch css-canvas-medical 
+  178  git status
+  179  git log
+  180  git add css-canvas-medical/
+  181  git commit -m 'Completed css-canvas-medical challenge'
+  182  git push origin css-canvas-medical 
+  183  git switch main
+  184  git branch css-ecommerce-page
+  185  git switch css-ecommerce-page 
+  186  git add css-ecommerce-page/
+  187  git stash
+  188  git switch css-four-column-layout 
+  189  git switch css-ecommerce-page 
+  190  git stash pop
+  191  git status
+  192  git add css-ecommerce-page/
+  193  git stash
+  194  git switch main
+  195  git branch practice-interview
+  196  git switch practice-interview 
+  197  git add .
+  198  git commit -m 'Finished getRangeReport()'
+  199  git switch main
+  200  git branch es6-template-literals
+  201  git switch es6-template-literals 
+  202  git status
+  203  git add es6-template-literals/
+  204  git commit 'Completed es6-template-literals'
+  205  git commit -m 'Completed es6-template-literals'
+  206  git push origin es6-template-literals 
+  207  git add es6-template-literals/
+  208  git commit -m 'Completed es6-template-literals'
+  209  git push origin es6-template-literals 
+  210  git status
+  211  git switch main
+  212  git switch main
+  213  git branch javascript-timers
+  214  git switch javascript-timers 
+  215  git add javascript-timers/
+  216  git commit -m 'Completed javascript-timers -Kaitlin Lovrich'
+  217  git push origin javascript-timers 
+  218  git switch main
+  219  git branch javascript-carousel
+  220  git switch javascript-carousel 
+  221  git status
+  222  git add javascript-carousel/
+  223  git commit -m 'Incomplete :)'
+  224  git switch main
+  225  git branch http-messages
+  226  git switch http-messages 
+  227  git switch main
+  228  git pull origin main
+  229  git switch http-messages 
+  230  git add http-messages/
+  231  git commit -m 'Initial files'
+  232  cd ..
+  233  pwd
+  234  cd c-0823-code-solutions/
+  235  http GET pie.dev/https://example.com
+  236  http GET pie.dev/https://learning-fuze.github.io/example/
+  237  http https://learning-fuze.github.io/example/
+  238  http http://www.example.com
+  239  http --verbose http://www.example.com
+  240  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  241  http --body GET https://example.com > http-messages/index.html
+  242  git add http-messages/
+  243  git commit -m 'Completed http-messages exercise'
+  244  git push http-messages/
+  245  git push origin http-messages/
+  246  git status
+  247  git push origin http-messages
+  248  git switch main
+  249  git branch javascript-new
+  250  git switch javascript-new 
+  251  git add javascript-new/
+  252  git commit -m 'Completed javascript-new exercise'
+  253  git push origin javascript-new 
+  254  git switch main
+  255  git pull origin main
+  256  git switch javascript-new
+  257  git add javascript-new/
+  258  git commit -m 'UPdated main.js'
+  259  git push origin javascript-new 
+  260  git switch main
+  261  git branch es6-classes
+  262  git switch es6-classes 
+  263  git add es6-classes/
+  264  git commit -m 'Completed es6-classes -Kaitlin Lovrich'
+  265  es6-classes
+  266  git push origin es6-classes 
+  267  git status
+  268  git status
+  269  git switch main
+  270  git branch javascript-ajax
+  271  git switch javascript-ajax 
+  272  git status
+  273  git add javascript-ajax/
+  274  git add javascript-ajax/
+  275  git commit -m 'Completed javascript-ajax -Kaitlin Lovrich'
+  276  git push origin javascript-ajax 
+  277  git add javascript-ajax/
+  278  git status
+  279  git commit -m 'Completed javascript-ajax -Kaitlin Lovrich'
+  280  git push origin javascript-ajax 
+  281  git status
+  282  git stash
+  283  git stash pop
+  284  git stash
+  285  git status
+  286  git switch main
+  287  git switch javascript-carousel 
+  288  git status
+  289  git switch main
+  290  git branch es6-destructuring
+  291  git switch es6-destructuring 
+  292  git add.
+  293  git add .
+  294  git status
+  295  git commit -m 'Completed es6-deconstructuring excercise -Kaitlin Lovrich'
+  296  git push origin es6-destructuring 
+  297  git add .
+  298  git add .
+  299  git commit -m 'updated files after group dicussion'
+  300  git push origin es6-destructuring 
+  301  git switch main
+  302  git branch es6-arrow-functions
+  303  git switch es6-arrow-functions
+  304  git add .
+  305  git commit -m 'Completed es6-arrow-functions exercise -Kaitlin Lovrich'
+  306  git push origin es6-arrow-functions 
+  307  git add .
+  308  git commit -m 'Completed es6-arrow-functions exercise -Kaitlin Lovrich'
+  309  git push origin es6-arrow-functions 
+  310  git switch main
+  311  git branch objects-revisited
+  312  git switch objects-revisited 
+  313  git add .
+  314  git commit -m 'work in progress'
+  315  git push origin objects-revisited 
+  316  git switch main
+  317  git branch array-methods
+  318  git switch array-methods
+  319  git stash
+  320  git add .
+  321  git stash
+  322  git stash list
+  323  git add .
+  324  git commit -m 'Completed array-methods excercise -Kaitlin Lovrich'
+  325  git push origin array-methods 
+  326  git add .
+  327  git commit -m 'Completed array-methods excercise -Kaitlin Lovrich'
+  328  git push origin array-methods 
+  329  git status
+  330  git add .
+  331  git stash
+  332  git switch main
+  333  git branch es6-operators
+  334  git switch es6-operators
+  335  git switch big-o-notation 
+  336  git add .
+  337  git commit -m 'Added changes after class discussion'
+  338  git add .
+  339  git add .
+  340  git commit -m 'Added changes after class discussion'
+  341  git push origin big-o-notation 
+  342  git switch npm-intro 
+  343  git status
+  344  git add .
+  345  git commit -m 'Added notes after class discussion'
+  346  git push origin npm-intro 
+  347  git switch main
+  348  git branch webpack-and-babel
+  349  git switch webpack-and-babel 
+  350  cd webpack-and-babel/
+  351  git add .
+  352  git commit -m 'Completed webpack-and-babel exercise -Kaitlin Lovrich'
+  353  git push origin webpack-and-babel 
+  354  git switch main
+  355  cd ..
+  356  git branch react-intro
+  357  git switch react-intro
+  358  cd react-intro/
+  359  npm create vite@latest my-app -- --template react
+  360  cd my-app
+  361  npm install
+  362  npm run dev
+  363  npm run dev
+  364  cd ../..
+  365  git add .
+  366  git commit -m 'Completed react-intro exercise -Kaitlin Lovrich'
+  367  git push origin react-intro 
+  368  git switch main
+  369  git branch react-jsx
+  370  git switch react-jsx
+  371  git add .
+  372  git commit -m 'Initial commit'
+  373  git cd react-jsx
+  374  cd react-jsx
+  375  npm create vite@latest my-app -- --template react
+  376  cd my-app
+  377  npm install
+  378  npm run dev
+  379  npm install
+  380  npm run dev
+  381  npm run dev
+  382  cd ../..
+  383  git add .
+  384  git add .
+  385  git commit -m 'Completed react-jsx exercise -Kaitlin Lovrich'
+  386  git push origin react-jsx
+  387  git switch main
+  388  git branch react-components
+  389  git switch react-components 
+  390  cd react-components/
+  391  npm create vite@latest my-app -- --template react
+  392  cd my-app
+  393  npm install
+  394  npm run dev
+  395  cd ../..
+  396  git add .
+  397  git commit -m 'Completed react-components exercise -Kailtin Lovrich'
+  398  git push origin react-components 
+  399  git switch react-jsx 
+  400  git status
+  401  git switch react-components 
+  402  git switch webpack-and-babel 
+  403  git status
+  404  git push origin webpack-and-babel 
+  405  git add .
+  406  git commit -'Completed webpack-and-babel exercise -Kaitlin Lovrich'
+  407  git commit -m 'Completed webpack-and-babel exercise -Kaitlin Lovrich'
+  408  git add .
+  409  git commit -m 'Completed webpack-and-babel exercise -Kaitlin Lovrich'
+  410  git push origin webpack-and-babel 
+  411  git switch react-components 
+  412  git add .
+  413  git commit -m 'Made changes after class discussion'
+  414  git push origin react-components 
+  415  git switch main
+  416  git branch react-props-and-expressions
+  417  git switch react-props-and-expressions 
+  418  git add .
+  419  git commit -m 'Initial commit'
+  420  cd react-props-and-expressions/
+  421  npm create vite@latest my-app -- --template react
+  422  cd my-app
+  423  npm install
+  424  npm run dev
+  425  git add .
+  426  git commmit -m 'Completed react-props-and-expressions'
+  427  git commit -m 'Completed react-props-and-expressions'
+  428  git add .
+  429  git commit -m 'Completed react-props-and-expressions'
+  430  git add .
+  431  git commit -m 'Completed react-props-and-expressions'
+  432  git push origin react-props-and-expressions 
+  433  nmp run dev
+  434  npm run dev
+  435  git add .
+  436  git commit -m 'Edited files during class discussion'
+  437  cd ../..
+  438  git status
+  439  git add .
+  440  git commit -m 'Edited files during class discussion'
+  441  git push origin react-props-and-expressions 
+  442  git switch main
+  443  git branch react-events
+  444  git switch react-events 
+  445  cd react-events/
+  446  npm create vite@latest my-app -- --template react
+  447  cd my-app/
+  448  npm install
+  449  npm run dev
+  450  cd ../..
+  451  git add .
+  452  git commit -m 'Completed react-events -Kaitlin Lovrich'
+  453  git add .
+  454  git commit -m 'Completed react-events -Kaitlin Lovrich'
+  455  git push origin react-events 
+  456  cd react-events/my-app/
+  457  npm run dev
+  458  git add .
+  459  git commit -m 'Completed react-events -Kaitlin Lovrich'
+  460  git push origin react-events 
+  461  cd ../..
+  462  git switch main
+  463  git switch react-state
+  464  git branch react-state
+  465  git switch react-state
+  466  cd react-state
+  467  npm create vite@latest my-app -- --template react
+  468  cd my-app/
+  469  npm install
+  470  npm run dev
+  471  npmrun dev
+  472  npm run dev
+  473  npm run dev
+  474  git add .
+  475  git commit -m 'Completed react-state exercise -Kaitlin Lovrich'
+  476  cd ../..
+  477  git push origin react-state 
+  478  git status
+  479  git add
+  480  git add .
+  481  git commit -m 'Added notes'
+  482  git push origin react-state 
+  483  git switch react-events 
+  484  cd react-events/
+  485  cd my-app/app
+  486  npm run dev
+  487  cd ..
+  488  git add .
+  489  git commit -m 'Added changes'
+  490  git push origin react-events
+  491  git switch react-state 
+  492  cd react-state/
+  493  cd my-app/
+  494  npm run dev
+  495  cd ../..
+  496  git add .
+  497  git commit -m 'Added changes after class dicussion'
+  498  git push origin react-state 
+  499  git switch main
+  500  git branch command-line-basics
+  501  git add .
+  502  git stash
+  503  git switch command-line-basics
+  504  git add .
+  505  git commit -m 'Initial commit'
+  506  cd command-line-basics/
+  507  man man
+  508  man cat
+  509  man cat
+  510  man echo
+  511  cat laziness.txt
+  512  cat impatience.txt
+  513  cat hubris.txt 
+  514  cat laziness.txt impatience.txt hubris.txt 
+  515  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  516  cat three-virtues.txt 
+  517  man ls
+  518  man ls
+  519  ls -aF lfz-staff/
+  520  ls lfz-staff/
+  521  ls -aF lfz-staff/ > lfz-staff/contents.txt
+  522  cat lfz-staff/contents.txt
+  523  man pwd
+  524  pwd
+  525  pwd > i-was-here.txt
+  526  ls
+  527  cat i-was-here.txt 
+  528  man echo
+  529  echo 'Hello, World!> hello.txt
+q
+  530  echo "Hello, World!"
+  531  ls 
+  532  echo 'Hello, World!> hello.txt
+  533  echo "Hello, World!"> hello.txt
+  534  ls
+  535  cat hello.txt 
+  536  man touch 
+  537  touch tag-youre-it.txt
+  538  touch boop.txt
+  539  rm boop.txt 
+  540  touch snoot/boop.txt
+  541  ls snoot/
+  542  man mkdir
+  543  man mkdir
+  544  mkdir parent/
+  545  ls
+  546  mkdir -p parent/child/grandchild
+  547  ls parent/
+  548  ls parent/child/
+  549  touch parent/child/grandchild/.gitkeep
+  550  ls -a parent/child/grandchild/
+  551  man mv
+  552  mv pokiemans pokemon
+  553  ls
+  554  rm lol.txt 
+  555  ls
+  556  less i-was-here.txt 
+  557  rm -r kill-me/
+  558  cp and-then.txt no-and-then.txt
+  559  cat and-then.txt 
+  560  cat no-and-then.txt 
+  561  history > command-history.txt
