@@ -14,3 +14,6 @@ After completing this exercise, you should be able to discuss or answer the foll
   import
 
 ## Notes
+
+const num1 = Number(n1) || 0; // if n1 is NaN, retruns 0
+const num2 = Number(n2) || 0; // if n1 is NaN, retruns 0
