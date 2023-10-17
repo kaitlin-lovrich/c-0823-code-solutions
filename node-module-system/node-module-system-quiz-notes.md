@@ -5,7 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is a JavaScript module?
-
+  a single .js file.
 - What are the advantages of modular programming?
 
 - In JavaScript, how do you make a function in a module available to other modules?
