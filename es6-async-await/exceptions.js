@@ -13,7 +13,7 @@ async function throwOnce() {
     const msg = await read('foo', false);
     console.log(elapsed(), 'throwOnce:', msg);
   } catch (error) {
-    console.log(elapsed(), 'throwOnce: Error', error.message);
+    console.error(elapsed(), 'throwOnce: Error', error.message);
   }
 }
 
@@ -42,7 +42,7 @@ async function throwChained() {
     const msg3 = await read('foo-chain', false);
     console.log(elapsed(), 'throwChained3:', msg3);
   } catch (error) {
-    console.error(elapsed(), 'throwChained Error:', error.msg);
+    console.error(elapsed(), 'throwChained Error:', error.message);
   }
 }
 
