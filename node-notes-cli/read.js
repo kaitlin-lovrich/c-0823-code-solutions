@@ -5,7 +5,6 @@ const json = await readFile('data.json', 'utf8'); // string
 const data = JSON.parse(json); // obj
 
 export default async function readNote() {
-  const output = [];
   for (const id in data.notes) {
     console.log(id, ': ', data.notes[id]);
   }
