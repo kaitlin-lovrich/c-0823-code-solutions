@@ -38,7 +38,6 @@ app.get('/api/grades', (req, res, next) => {
     gradeObjsArray.push(grades[id]);
   }
   res.json(gradeObjsArray);
-  res.send();
   next();
 });
 
