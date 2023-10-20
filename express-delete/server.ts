@@ -30,13 +30,22 @@ const grades: Record<number, Grade> = {
 
 const app = express();
 
-app.get((req, res, next) => {
-  const gradesArray: any = [];
+app.get('/api/grades', (req, res) => {
+  const gradeObjsArray: any = [];
   for (const id in grades) {
-    gradesArray.push(grades[id]);
+    gradeObjsArray.push(grades[id]);
   }
-  req.json(gradesArray);
-  next();
+  res.json(gradeObjsArray);
+});
+
+app.delete('/api/grades/:id', (req: any, res: any) => {
+  const id = req.params.id;
+  if (id in grades) {
+    delete grades[id];
+    res.sendStatus(204);
+  } else {
+    res.sendStatus(404);
+  }
 });
 
 app.listen(8080, () => console.log('Listening on port 8080'));
