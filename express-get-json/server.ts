@@ -28,8 +28,6 @@ const grades: Record<number, Grade> = {
   },
 };
 
-console.log(grades); // to get rid of variable never used error
-
 const app = express();
 
 app.get('/api/grades', (req, res, next) => {
