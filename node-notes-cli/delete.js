@@ -4,7 +4,7 @@ import { writeFile, readFile } from 'node:fs/promises';
 const json = await readFile('data.json', 'utf8'); // string
 const data = JSON.parse(json); // obj
 
-export default async function createNote() {
+export default async function deleteNote() {
   const [, , , id] = process.argv;
   delete data.notes[id];
   const dataNotesP = await writeFile(
