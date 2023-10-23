@@ -5,16 +5,17 @@ import { writeFile, readFile } from 'node:fs/promises';
 const app = express();
 app.use(express.json());
 
-const json = await readFile('data.json', 'utf8'); // string
-const data = JSON.parse(json); // obj
-
 // Writes data to data.json
 async function writeData() {
   await writeFile('data.json', JSON.stringify(data, null, 2), 'utf8');
 }
 
 // Reads all notes in the array
-app.get('/api/notes', (req, res) => {
+app.get('/api/notes', async (req, res) => {
+  // Reads data from data.json
+  const json = await readFile('data.json', 'utf8'); // string
+  const data = JSON.parse(json); // obj
+
   let note: any;
   const notesArray = [];
   for (note in data.notes) {
@@ -24,7 +25,11 @@ app.get('/api/notes', (req, res) => {
 });
 
 // Reads the note specified by the inputted id
-app.get('/api/notes/:id', (req, res) => {
+app.get('/api/notes/:id', async (req, res) => {
+  // Reads data from data.json
+  const json = await readFile('data.json', 'utf8'); // string
+  const data = JSON.parse(json); // obj
+
   const { id } = req.params;
   if (+id < 0) {
     res.status(400).json({ error: `${id} not a positive integer` });
@@ -37,12 +42,16 @@ app.get('/api/notes/:id', (req, res) => {
 
 // Creates a new note and writes it to data.json
 app.post('/api/notes', async (req, res) => {
+  // Reads data from data.json
+  const json = await readFile('data.json', 'utf8'); // string
+  const data = JSON.parse(json); // obj
+
   try {
     const { content } = req.body;
     const note = req.body;
     if (!content) {
       res.status(400).json({ error: 'content is a required field' });
-    } else if (content) {
+    } else {
       note.id = data.nextId;
       data.notes[data.nextId++] = note;
       res.status(201).json(data.notes[note.id]);
@@ -56,6 +65,10 @@ app.post('/api/notes', async (req, res) => {
 
 // Deletes the note specified by the inputted id and removes it from data.json
 app.delete('/api/notes/:id', async (req, res) => {
+  // Reads data from data.json
+  const json = await readFile('data.json', 'utf8'); // string
+  const data = JSON.parse(json); // obj
+
   try {
     const { id } = req.params;
     if (+id < 0) {
@@ -75,6 +88,10 @@ app.delete('/api/notes/:id', async (req, res) => {
 
 // Updates the note specified by the inputted id
 app.put('/api/notes/:id', async (req, res) => {
+  // Reads data from data.json
+  const json = await readFile('data.json', 'utf8'); // string
+  const data = JSON.parse(json); // obj
+
   try {
     const { id } = req.params;
     const { content } = req.body;
@@ -85,7 +102,7 @@ app.put('/api/notes/:id', async (req, res) => {
       });
     } else if (!(id in data.notes)) {
       res.status(404).json({ error: `cannot find note with id: ${id}` });
-    } else if (content) {
+    } else {
       note.id = +id;
       data.notes[id] = note;
       res.status(200).json(data.notes[id]);
