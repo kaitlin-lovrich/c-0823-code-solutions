@@ -2,28 +2,8 @@
 
 ## Notes
 
-All student notes should be written here.
+clean exit error means you forgot to do app.listen at the bottom
+async functions return a Promise<void>
 
-How to write `Code Examples` in markdown
-
-for JS:
-
-```javascript
-const data = 'Howdy';
-```
-
-for HTML:
-
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
-
-for CSS:
-
-```css
-div {
-  width: 100%;
-}
-```
+localhost is default so you can do for example:
+http -v get :8080/api/notes
