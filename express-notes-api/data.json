@@ -1,5 +1,5 @@
 {
-  "nextId": 16,
+  "nextId": 17,
   "notes": {
     "2": {
       "id": 2,
@@ -30,16 +30,12 @@
       "id": 12
     },
     "13": {
-      "content": "hi Kaitlin quatro",
+      "content": "Hi Ethan",
       "id": 13
     },
-    "14": {
-      "content": "hi Kaitlin quatro",
-      "id": 14
-    },
-    "15": {
-      "content": "hi Kaitlin quatro",
-      "id": 15
+    "16": {
+      "content": "Hi Roberto",
+      "id": 16
     }
   }
 }
