@@ -7,6 +7,9 @@ app.use(express.json());
 
 // Writes data to data.json
 async function writeData() {
+  // Reads data from data.json
+  const json = await readFile('data.json', 'utf8'); // string
+  const data = JSON.parse(json); // obj
   await writeFile('data.json', JSON.stringify(data, null, 2), 'utf8');
 }
 
