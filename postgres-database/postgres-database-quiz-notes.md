@@ -18,3 +18,5 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 Searches the pagila table for atributes of castmembers table
 psql -d pagila -c "\d \"castMemebers\""
+
+if mixed case capital and lowercase, you need to use double quotes for the attributes
