@@ -24,7 +24,7 @@ select "productId",
        "name",
        "price"
   from "products"
- where "category" = 'cleaning';
+  where "category" = 'cleaning';
 ```
 
 - What are the benefits of formatting your SQL?
