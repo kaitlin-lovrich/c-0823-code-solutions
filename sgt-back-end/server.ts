@@ -3,6 +3,12 @@ import pg from 'pg';
 import { ClientError } from './client-error.js';
 import { errorMiddleware } from './error-middleware.js';
 
+type Grade = {
+  gradeId: number;
+  name: string;
+  course: string;
+};
+
 // only create ONE pool for your whole server
 const db = new pg.Pool({
   connectionString: 'postgres://dev:dev@localhost/studentGradeTable',
@@ -21,7 +27,7 @@ app.get('/api/grades', async (req, res, next) => {
       select *
         from "grades"
     `;
-    const result = await db.query(sql);
+    const result = await db.query<Grade>(sql);
     res.json(result.rows);
   } catch (err) {
     next(err);
@@ -31,7 +37,6 @@ app.get('/api/grades', async (req, res, next) => {
 app.get('/api/grades/:gradeId', async (req, res, next) => {
   try {
     const gradeId = Number(req.params.gradeId);
-    console.log(gradeId);
     if (!Number.isInteger(gradeId) || gradeId <= 0) {
       throw new ClientError(400, '"gradeId" must be a positive integer');
     }
@@ -39,9 +44,10 @@ app.get('/api/grades/:gradeId', async (req, res, next) => {
       select *
         from "grades"
         where "gradeId" = $1
+        returning *;
     `;
     const params = [gradeId];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     const grade = result.rows[0];
     if (!grade) {
       throw new ClientError(404, `Cannot find grade with "gradeId" ${gradeId}`);
@@ -55,17 +61,17 @@ app.get('/api/grades/:gradeId', async (req, res, next) => {
 app.post('/api/grades', async (req, res, next) => {
   try {
     const { name, course, score } = req.body;
+    if (!name || !course || score !== 'number' || score < 0 || score > 100) {
+      throw new ClientError(400, `name, course or score not valid`);
+    }
     const sql = `
       insert into "grades" ("name", "course", "score")
         values ($1, $2, $3)
         returning *;
     `;
     const params = [name, course, score];
-    const result = await db.query(sql, params);
-    const grade = result.rows;
-    if (!name || !course || !score) {
-      throw new ClientError(404, `name course or score not valid`);
-    }
+    const result = await db.query<Grade>(sql, params);
+    const grade = result.rows[0];
     res.json(grade);
   } catch (err) {
     next(err);
@@ -86,12 +92,12 @@ app.delete('/api/grades/:gradeId', async (req, res, next) => {
         returning *;
     `;
     const params = [gradeId];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     const grade = result.rows[0];
     if (!grade) {
       throw new ClientError(404, `Cannot find grade with "gradeId" ${gradeId}`);
     }
-    res.json(grade);
+    res.sendStatus(204);
   } catch (err) {
     next(err);
   }
@@ -108,14 +114,14 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     const sql = `
       update "grades"
         set
-          "name" = $2,
-          "course" = $3,
-          "score" = $4
-        where "gradeId" = $1
+          "name" = $1,
+          "course" = $2,
+          "score" = $3
+        where "gradeId" = $4
         returning *;
     `;
-    const params = [gradeId, name, course, score];
-    const result = await db.query(sql, params);
+    const params = [name, course, score, gradeId];
+    const result = await db.query<Grade>(sql, params);
     const grade = result.rows[0];
     if (!grade) {
       throw new ClientError(404, `Cannot find grade with "gradeId" ${gradeId}`);

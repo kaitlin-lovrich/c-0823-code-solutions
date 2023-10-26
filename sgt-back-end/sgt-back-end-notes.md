@@ -11,3 +11,5 @@ name
 course
 score
 createdAt
+
+you can only use re.body when youve installed the json middleware
