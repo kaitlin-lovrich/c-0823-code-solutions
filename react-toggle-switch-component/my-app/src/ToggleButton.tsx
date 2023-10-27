@@ -17,3 +17,19 @@ export default function ToggleButton() {
     </div>
   );
 }
+
+// Robeerts solulu:
+// export function ToggleSwitch() {
+//   const [isOn, setIsOn] = useState(false);
+
+//   const label = isOn ? 'On' : 'Off';
+//   const classN = isOn ? 'On' : 'Off';
+//   return (
+//     <div className={classN}>
+//       <div className="slider">
+//         <div onClick={() => setIsOn(!isOn)} className="switch"></div>
+//       </div>
+//       <span className="state-label">{label}</span>
+//     </div>
+//   );
+// }
