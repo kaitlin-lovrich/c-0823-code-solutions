@@ -3,9 +3,11 @@
 ## Quiz Questions
 
 - What is a foreign key?
-  A reference to a primary key
+  A foreign key is a key used to link two tables together.
 - How do you join two SQL tables? (Provide at least two syntaxes.)
-  with a `join` <tableName> `using` clause
+  My answer: "with a `join` <tableName> `using` clause"
+  - By using the `join` clause, followed by the `using` clause, and then the column name.
+  - By using the `join` clause, followed by the target table name, and then an expression that matches the foreign key in the `from` table with the primary key in the target table.
 
 ```js
 select *
@@ -46,7 +48,8 @@ select "p"."name" as "product",
 - How do you create a one-to-many relationship between two tables?
   a foreign key in one table pointing to a primary key in another table
 - How do you create a many-to-many relationship between two tables?
-  can be modeled by introducing a 3rd "join table" that contains a foreign key to one of the tables and another foreign key to the other table.
+  My answer: "can be modeled by introducing a 3rd "join table" that contains a foreign key to one of the tables and another foreign key to the other table."
+  Class answer: - Add a third table (referred to as a "join" table) that contains two fields: a foreign key to the first table and a foreign key to the second table.
 
 ## Notes
 

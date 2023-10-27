@@ -4,5 +4,5 @@ select
   from "rentals"
   join "inventory" using("inventoryId")
   join "customers" as "c" using ("customerId")
-  join "films" as "f" using ("filmsId")
+  join "films" as "f" using ("filmId")
   where "title" = 'Magic Mallrats';
