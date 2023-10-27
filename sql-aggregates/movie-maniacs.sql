@@ -2,8 +2,8 @@
 select
     "firstName",
     "lastName",
-    "p"."rentalId"."amount" as "totalSpent"
-    from "customers" as "c"
-    join "rentals" as "r" using ("customerId")
-    join "payments" as "p" using ("rentalId")
+    sum("p"."amount") as "totalSpent"
+    from "customers"
+    join "payments" as "p" using ("customerId")
+    group by "customerId"
     order by "totalSpent" desc;

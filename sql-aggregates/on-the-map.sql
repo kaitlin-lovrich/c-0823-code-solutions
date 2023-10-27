@@ -1,6 +1,6 @@
 -- List the number of "cities" per country in the "countries" table.
 select
-    "countries"."name" as "countryName",
+    "countries"."name" as "country",
     count("cityId") as "cityCount"
   from "countries"
   join "cities" using ("countryId")

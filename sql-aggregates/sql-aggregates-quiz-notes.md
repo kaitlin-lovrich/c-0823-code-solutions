@@ -10,5 +10,6 @@ After completing this exercise, you should be able to discuss or answer the foll
   to group columns together
   class answer: group by always requires an aggregate function.
   takes the entire result set and specifies what column to group by
+  The purpose of a `group by` clause is to specify which column the returned data will be grouped by.
 
 ## Notes
