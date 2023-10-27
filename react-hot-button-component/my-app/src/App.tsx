@@ -43,3 +43,23 @@ function App() {
 }
 
 export default App;
+
+// /* eslint-disable @typescript-eslint/no-explicit-any */
+// import './App.css';
+// import HotButton from './HotButton';
+// import handleClick from './HotButton';
+// import changeColor from './HotButton';
+
+// function App() {
+//   return (
+//     <>
+//       <HotButton
+//         text="Hot Button"
+//         customClick={handleClick()}
+//         color={changeColor(count)}
+//       />
+//     </>
+//   );
+// }
+
+// export default App;
