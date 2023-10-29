@@ -1,23 +1,46 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
+import { useState } from 'react';
 import './HotButton.css';
 
 type ButtonProps = {
   text: string;
-  color: string;
-  customClick: () => void;
 };
 
-export default function HotButton({ text, color, customClick }: ButtonProps) {
+export default function HotButton({ text }: ButtonProps) {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  function changeColor(count: number) {
+    let color;
+    if (count < 3) {
+      color = 'cold';
+    } else if (count < 6) {
+      color = 'cool';
+    } else if (count < 9) {
+      color = 'tepid';
+    } else if (count < 12) {
+      color = 'warm';
+    } else if (count < 15) {
+      color = 'hot';
+    } else if (count < 18) {
+      color = 'nuclear';
+    } else {
+      color = 'cold';
+      setCount(0);
+    }
+    return color;
+  }
+
   return (
-    <button onClick={() => customClick()} className={color}>
+    <button onClick={() => handleClick()} className={changeColor(count)}>
       {text}
     </button>
   );
 }
 
-// colors[Math.floor(clicks/3) % VideoColorSpace.length];
-// above ^ whats left over (from the modulo operator) will never be bigger than the lentgth
+// Robert's Solulu:
 // import { useState } from 'react';
 // type Props = {
 //   label: string;
@@ -37,3 +60,5 @@ export default function HotButton({ text, color, customClick }: ButtonProps) {
 //     </>
 //   );
 // }
+// colors[Math.floor(clicks/3) % VideoColorSpace.length];
+// above ^ whats left over (from the modulo operator) will never be bigger than the lentgth
