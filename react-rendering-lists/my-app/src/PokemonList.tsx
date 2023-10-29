@@ -1,8 +1,8 @@
 type PokemonListProps = {
-  pokedex: Pokedex[];
+  pokedex: Pokemon[]; // I had previously named Pokemon, Pokedex. I changed it to show it doesnt have to be the same as the prop
 };
 
-type Pokedex = {
+type Pokemon = {
   number: string;
   name: string;
 };
