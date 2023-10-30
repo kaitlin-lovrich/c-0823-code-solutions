@@ -36,3 +36,4 @@ https://react.dev/reference/react-dom/components/input#usage
 
 - A controlled component should always receive a string value, not null or undefined
   if it needs to be empty, pass value an empty string `value={''}` or pass value={someValue ?? ''}
+  ?? nullish coalescing operator

@@ -29,3 +29,6 @@ export default function RegistrationFormUncontrolled() {
     </form>
   );
 }
+
+// event.target is what the user clicked on, event.currentTarget is what the event handler is on
+// use event.currentTarget in react because it is typed correctly
