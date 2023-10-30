@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './ValidatedInput.css';
 
 export default function ValidatedInput() {
   const [password, setPassword] = useState('');
 
-  function handleSubmit(e: any) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.target;
+    const form = e.currentTarget;
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData.entries());
     console.log(formJson);
