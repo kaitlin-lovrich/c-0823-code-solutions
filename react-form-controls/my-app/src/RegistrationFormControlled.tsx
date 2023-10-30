@@ -1,21 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 
 export default function RegistrationFormControlled() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleSubmit(e: any) {
+  function handleSubmit(e: FormEvent) {
     // Prevent the browser from reloading the page
     e.preventDefault();
-
-    // Read the form data
-    const form = e.target;
-    const formData = new FormData(form);
-
-    // Turns form data into a JSON object and outputs to console
-    const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
+    // Logs the username and password object to the console
+    console.log({ userName, password });
   }
 
   return (

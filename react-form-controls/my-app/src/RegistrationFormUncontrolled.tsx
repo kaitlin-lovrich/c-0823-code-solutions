@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { FormEvent } from 'react';
 
 export default function RegistrationFormUncontrolled() {
-  function handleSubmit(e: any) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     // Prevent the browser from reloading the page
     e.preventDefault();
 
     // Read the form data
-    const form = e.target;
+    const form = e.currentTarget;
     const formData = new FormData(form);
 
     // Turns form data into a JSON object and outputs to console
