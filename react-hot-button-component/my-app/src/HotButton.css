@@ -1,0 +1,36 @@
+.cold {
+  background-color: rgb(53, 28, 117);
+}
+
+.cool {
+  background-color: rgb(103, 78, 167);
+}
+
+.tepid {
+  background-color: rgb(224, 102, 102);
+}
+
+.warm {
+  background-color: rgb(246, 178, 107);
+}
+
+.hot {
+  background-color: rgb(255, 255, 0);
+}
+
+.nuclear {
+  color: red;
+  border-color: red;
+  background-color: rgb(255, 255, 255);
+}
+
+.cold,
+.cool,
+.tepid {
+  color: rgb(255, 255, 255);
+}
+
+.warm,
+.hot {
+  color: rgb(70, 70, 70);
+}
