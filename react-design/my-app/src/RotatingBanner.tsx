@@ -1,3 +1,4 @@
+import ShowListItem from './ShowListItem';
 import PreviousButton from './PreviousButton';
 import Banner from './Banner';
 import NextButton from './NextButton';
@@ -9,8 +10,9 @@ type RotatingBannerProps = {
 export default function RotatingBanner({ items }: RotatingBannerProps) {
   return (
     <>
+      <ShowListItem items={items} />
       <PreviousButton />
-      <Banner items={items} />
+      <Banner />
       <NextButton />
     </>
   );

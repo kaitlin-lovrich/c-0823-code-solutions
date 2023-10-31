@@ -1,3 +1,9 @@
+import './PreviousButton.css';
+
 export default function PreviousButton() {
-  return <button>Prev</button>;
+  return (
+    <div id="prev-button">
+      <span>Prev</span>
+    </div>
+  );
 }
