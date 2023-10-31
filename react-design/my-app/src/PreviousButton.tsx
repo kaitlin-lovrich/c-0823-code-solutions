@@ -1,8 +1,12 @@
 import './PreviousButton.css';
 
-export default function PreviousButton() {
+type prevButtonProps = {
+  onClick: () => void;
+};
+
+export default function PreviousButton({ onClick }: prevButtonProps) {
   return (
-    <div id="prev-button">
+    <div id="prev-button" onClick={onClick}>
       <span>Prev</span>
     </div>
   );

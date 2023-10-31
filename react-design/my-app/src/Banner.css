@@ -10,3 +10,7 @@ ul#number-button > li > div.number-button {
   border-radius: 3px;
   font-size: 1.5rem;
 }
+
+.active {
+  background-color: aqua;
+}
