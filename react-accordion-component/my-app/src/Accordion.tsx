@@ -1,25 +1,32 @@
-import { Topics } from './App';
+import './Accordion.css';
 
-type AccordionProps = {
-  topics: object[];
+type Topics = {
+  id: number;
+  name: string;
+  info: string;
 };
 
-export default function Accordion({ topics }: AccordionProps) {
-  return <Topics topics={topics} />;
-}
-
-type TopicsProps = {
+type Props = {
   topics: Topics[];
 };
 
-function Topics({ topics }: TopicsProps) {
+export default function Accordion({ topics }: Props) {
+  return <ShowTopics topics={topics} />;
+}
+
+function ShowTopics({ topics }: Props) {
   const topicNames = topics.map((topic) => {
-    return <li key={topic.id}>{topic.name}</li>;
+    return (
+      <>
+        <div className="topic-name">
+          <li key={topic.id}>{topic.name}</li>
+        </div>
+        <div className="topic-info">
+          <li key={topic.id}>{topic.info}</li>
+        </div>
+      </>
+    );
   });
 
-  return (
-    <div>
-      <ul>{topicNames}</ul>
-    </div>
-  );
+  return <ul className="topics">{topicNames}</ul>;
 }

@@ -1,13 +1,7 @@
 import Accordion from './Accordion';
 import './App.css';
 
-export type Topics = {
-  id: number;
-  name: string;
-  info: string;
-};
-
-const topics: Topics[] = [
+const topics = [
   {
     id: 1,
     name: 'Hypertext Markup Language',
