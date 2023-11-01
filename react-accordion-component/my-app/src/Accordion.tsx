@@ -16,31 +16,27 @@ export default function Accordion({ topics }: Props) {
 }
 
 function ShowTopics({ topics }: Props) {
-  const [showInfo, setShowInfo] = useState(false);
-  const [selectedTopic, setSelectedTopic] = useState();
+  const [activePanel, setActivePanel] = useState<number>();
 
-  console.log(setSelectedTopic);
-  function handleClick() {
-    setShowInfo(!showInfo);
-    // setSelectedTopic(e.currentTarget);
-    // if (e.currenttarget === selectedTopic) {
-    //   setShowInfo(!showInfo);
-    // } else {
-    //   setSelectedTopic(e.currentTarget);
-    // }
-
-    console.log(selectedTopic);
+  function handleClick(topicId: number) {
+    if (activePanel === topicId) {
+      setActivePanel(0);
+    } else {
+      setActivePanel(topicId);
+    }
   }
 
   const topicNames = topics.map((topic) => {
     return (
       <div>
-        <div className="topic-name" onClick={handleClick}>
+        <div className="topic-name" onClick={() => handleClick(topic.id)}>
           <li key={topic.id}>{topic.name}</li>
         </div>
-        <div className={showInfo ? 'topic-info' : 'hidden'}>
-          <li key={topic.name}>{topic.info}</li>
-        </div>
+        {activePanel === topic.id && (
+          <div className="topic-info">
+            <li key={topic.name}>{topic.info}</li>
+          </div>
+        )}
       </div>
     );
   });
