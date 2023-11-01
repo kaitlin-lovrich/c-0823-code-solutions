@@ -11,3 +11,7 @@
 .start-stop {
   padding: 1rem;
 }
+
+.pointer:hover {
+  cursor: pointer;
+}
