@@ -7,6 +7,10 @@ body {
   display: none;
 }
 
+.topic-name {
+  background-color: #ddd;
+}
+
 .topic-name,
 .topic-info {
   padding: 0.4rem;
