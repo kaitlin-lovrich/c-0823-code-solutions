@@ -5,9 +5,9 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - When is a component "mounted" to the DOM?
-  when the component appears on the webpage
+  on the first render only
 - What is a React Effect?
-  it is a function that is called after a component is rendered
+  it is a hook that is called after a component is rendered
 - When should you use an Effect and when should you not use an Effect?
   you should use an effect when you want to modify non-react widgets like the browser video player or set up a server. Dont use it if you just want to update a react component.
 - When do Effects run?
@@ -44,3 +44,7 @@ Why Cleanup real life example:
 In Production:
 
 - In production, you would only see "✅ Connecting..." printed once. Remounting components only happens in development to help you find Effects that need cleanup. You can turn off Strict Mode to opt out of the development behavior, but we recommend keeping it on. This lets you find many bugs like the one above.
+
+-`setter functions` from (useState)(example: `setState`) will never have to be declared as a dependecy in a dependency array because it will never change. Neither will any function that has been imported. `readItems` function from src folder for example. Its being imported into List.tsx
+
+IF the ITEMS IN dev dependency array -CHANGE- THEN the use effect runs
