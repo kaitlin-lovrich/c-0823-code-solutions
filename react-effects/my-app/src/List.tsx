@@ -12,6 +12,20 @@ export function List() {
   //    - Read the items using `readItems` and update state so the list displays
   //    - Handle errors from `readItems`
 
+  useEffect(() => {
+    async function showList() {
+      try {
+        const items = await readItems();
+        setIsLoading(false);
+        setItems(items);
+      } catch (error) {
+        setError(error);
+        setIsLoading(false);
+      }
+    }
+    showList();
+  }, []);
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
