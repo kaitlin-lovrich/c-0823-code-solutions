@@ -15,7 +15,7 @@ export default function SearchableList({ phraseList }: SearchableListProps) {
 
   return (
     <>
-      <SearchBar input={input} setInput={setInput} />
+      <SearchBar input={input} onChangeInput={setInput} />
       <SearchList phraseList={inputList} />
     </>
   );
@@ -23,14 +23,14 @@ export default function SearchableList({ phraseList }: SearchableListProps) {
 
 type SearchBarProps = {
   input: string;
-  setInput: (value: string) => void;
+  onChangeInput: (value: string) => void;
 };
 
-function SearchBar({ input, setInput }: SearchBarProps) {
+function SearchBar({ input, onChangeInput }: SearchBarProps) {
   return (
     <input
       value={input}
-      onChange={(e) => setInput(e.currentTarget.value)}
+      onChange={(e) => onChangeInput(e.currentTarget.value)}
       className="input"></input>
   );
 }
