@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps -- Delete this line! */
+// /* eslint-disable react-hooks/exhaustive-deps -- Delete this line! */
 import { useEffect, useState } from 'react';
 
 export function Timer() {
@@ -9,7 +9,7 @@ export function Timer() {
       console.log(`Time is: ${time}`);
     }, 1000);
     return () => clearTimeout(timerId);
-  }, []);
+  }, [time]);
 
   return (
     <div>
