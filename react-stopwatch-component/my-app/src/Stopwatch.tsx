@@ -4,36 +4,34 @@ import { useState } from 'react';
 
 export default function Stopwatch() {
   const [time, setTime] = useState(0);
-  const [running, setRunning] = useState(false);
   const [intervalId, setIntervalId] = useState<NodeJS.Timer>();
 
   function handleStartStopClick() {
-    setRunning(!running);
-    if (running) {
+    if (intervalId) {
       clearInterval(intervalId);
       setIntervalId(undefined);
     } else {
       setIntervalId(
         setInterval(() => {
           setTime((prev) => prev + 1);
-        }, 500)
+        }, 1000)
       );
     }
   }
 
   function handleResetClick() {
-    if (!running) {
-      setRunning(!running);
+    if (intervalId === undefined) {
       setTime(0);
-      clearInterval(intervalId);
-      setIntervalId(undefined);
     }
   }
 
   return (
     <div>
       <Counter time={time} onClick={handleResetClick} />
-      <StartStop running={running} onClick={handleStartStopClick} />
+      <StartStop
+        isRunning={intervalId !== undefined}
+        onClick={handleStartStopClick}
+      />
     </div>
   );
 }
@@ -52,14 +50,14 @@ function Counter({ time, onClick }: CounterProps) {
 }
 
 type StartStopProps = {
-  running: boolean;
+  isRunning: boolean;
   onClick: () => void;
 };
 
-function StartStop({ running, onClick }: StartStopProps) {
+function StartStop({ isRunning, onClick }: StartStopProps) {
   return (
     <div onClick={onClick} className="start-stop">
-      {running ? <FaPause /> : <FaPlay />}
+      {isRunning ? <FaPause /> : <FaPlay />}
     </div>
   );
 }
@@ -76,9 +74,11 @@ function StartStop({ running, onClick }: StartStopProps) {
 // import { useState } from 'react';
 // import { FaPause, FaPlay } from 'react-icons/fa';
 // import './StopWatch.css';
+
 // export function StopWatch() {
 //   const [elapsedTime, setElapsedTime] = useState(7);
 //   const [intervalId, setIntervalId] = useState<NodeJS.Timer>();
+
 //   function handlePlayClick() {
 //     if (intervalId === undefined) {
 //       const id = setInterval(() => setElapsedTime((prev) => prev + 1), 1000);
@@ -88,7 +88,9 @@ function StartStop({ running, onClick }: StartStopProps) {
 //       setIntervalId(undefined);
 //     }
 //   }
+
 //   const cursor = intervalId === undefined ? 'pointer' : 'default';
+
 //   return (
 //     <div className="stopwatch">
 //       <div
@@ -104,16 +106,20 @@ function StartStop({ running, onClick }: StartStopProps) {
 //     </div>
 //   );
 // }
+
 // type TimeProps = {
 //   time: number;
 // };
+
 // function ElapsedTime({ time }: TimeProps) {
 //   return <div>{time}</div>;
 // }
+
 // type ButtonProps = {
 //   isRunning: boolean;
 //   onClick: () => void;
 // };
+
 // function PlayButton({ isRunning, onClick }: ButtonProps) {
 //   return (
 //     <div onClick={onClick} className="start-stop">
