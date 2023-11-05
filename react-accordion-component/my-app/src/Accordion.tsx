@@ -20,7 +20,7 @@ function ShowTopics({ topics }: Props) {
 
   function handleClick(topicId: number) {
     if (activePanel === topicId) {
-      setActivePanel(0);
+      setActivePanel(undefined);
     } else {
       setActivePanel(topicId);
     }
