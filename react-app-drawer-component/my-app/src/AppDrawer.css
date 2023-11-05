@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .menu-icon {
   margin: 0.5rem;
   font-size: 2rem;
@@ -71,4 +75,14 @@
 
 .menu-item:hover {
   background-color: rgb(230, 230, 230);
+}
+
+.page-heading {
+  width: 300px;
+}
+
+div#page-heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }

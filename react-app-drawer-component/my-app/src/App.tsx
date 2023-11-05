@@ -1,4 +1,3 @@
-import './App.css';
 import AppDrawer from './AppDrawer';
 
 const menu = [
