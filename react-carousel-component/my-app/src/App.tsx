@@ -1,33 +1,30 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="row">
+        <div id="left-arrow">
+          <i className="fa-solid fa-chevron-left"></i>
+        </div>
+        <div className="img-div">
+          <img className="hidden" src="./images/001.png" />
+          <img className="hidden" src="./images/004.png" />
+          <img className="hidden" src="./images/007.png" />
+          <img className="hidden" src="./images/025.png" />
+          <img className="hidden" src="./images/039.png" />
+        </div>
+        <div id="right-arrow">
+          <i className="fa-solid fa-chevron-right"></i>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="row">
+        <i className="fa-solid fa-circle active"></i>
+        <i className="fa-regular fa-circle"></i>
+        <i className="fa-regular fa-circle"></i>
+        <i className="fa-regular fa-circle"></i>
+        <i className="fa-regular fa-circle"></i>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
