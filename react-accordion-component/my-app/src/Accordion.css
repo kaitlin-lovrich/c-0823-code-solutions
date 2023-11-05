@@ -1,0 +1,25 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.topic-name {
+  background-color: #ddd;
+}
+
+.topic-name,
+.topic-info {
+  padding: 0.4rem;
+  border: 3px solid black;
+  margin: 0.1rem;
+  width: 300px;
+}
+
+.topics {
+  list-style-type: none;
+  text-align: left;
+}
