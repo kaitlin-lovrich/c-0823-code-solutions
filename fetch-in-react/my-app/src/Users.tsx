@@ -21,21 +21,25 @@ export function Users() {
   /* your code here (hint: useEffect) */
   useEffect(() => {
     async function readTenUsers() {
+      setIsLoading(true);
       try {
         const response = await fetch(
           'https://jsonplaceholder.typicode.com/users'
         );
-        if (!response.ok) setError(response.status);
+        if (!response.ok)
+          throw new Error(`An error occurred ${response.status}`);
         const tenUsers = await response.json();
         setUsers(tenUsers);
       } catch (err) {
         console.error(err);
+        setError(err);
       } finally {
         setIsLoading(false);
       }
     }
     readTenUsers();
   }, []);
+
   if (isLoading) {
     return <p>Loading...</p>;
   }
