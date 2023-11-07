@@ -39,6 +39,7 @@ export function Todos() {
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo) {
+    setIsLoading(true);
     try {
       const response = await fetch('/api/todos', {
         method: 'post',
@@ -47,8 +48,7 @@ export function Todos() {
       });
       if (!response.ok) throw new Error('There was an error');
       const createdTodo = await response.json();
-      const todosPlus = todos.concat(createdTodo);
-      setTodos(todosPlus);
+      setTodos(todos.concat(createdTodo)); // can optionally do a spread as well [...todos, value]
     } catch (err) {
       console.error(err);
       setError(err);
@@ -59,6 +59,7 @@ export function Todos() {
 
   /* Implement toggleCompleted to toggle the completed state of a todo. Hints are at the bottom of the file. */
   async function toggleCompleted(todoId: number) {
+    setIsLoading(true);
     try {
       const matchingTodo = todos.find((todo) => todo.todoId === todoId);
       const oppositeCompleted = { isCompleted: !matchingTodo?.isCompleted };
