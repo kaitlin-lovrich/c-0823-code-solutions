@@ -19,6 +19,11 @@ body {
   font-size: 40px;
 }
 
+#left-arrow:hover,
+#right-arrow:hover {
+  cursor: pointer;
+}
+
 img {
   width: 100%;
 }

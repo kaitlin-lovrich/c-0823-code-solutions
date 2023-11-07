@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import './App.css';
@@ -28,28 +29,35 @@ const images = [
 
 function App() {
   const [index, setIndex] = useState(0);
-  const [activeCircle, setActiveCircle] = useState(false);
+  const [activeCircle, setActiveCircle] = useState(index);
 
   function handleLeftClick() {
-    index && setIndex(index - 1);
+    index > 0 ? setIndex(index - 1) : setIndex(images.length - 1);
   }
 
   function handleRightClick() {
-    index < images.length && setIndex(index + 1);
+    index < images.length - 1 ? setIndex(index + 1) : setIndex(0);
+  }
+
+  function handleCircleClick(circleIndex: any) {
+    console.log('click', circleIndex.target);
+    console.log(circleIndex);
+    setActiveCircle(circleIndex);
   }
 
   return (
     <>
       <div className="row">
-        <LeftArrow onLeftClick={() => handleLeftClick} />
+        <LeftArrow onLeftClick={handleLeftClick} />
         <ShowImage image={images[index]} />
-        <RightArrow onRightClick={() => handleRightClick} />
+        <RightArrow onRightClick={handleRightClick} />
       </div>
       <div className="row">
         <CircleIndicators
           currentImage={images[index]}
-          activeCircle={activeCircle}
-          setActiveCircle={setActiveCircle}
+          index={index}
+          // setActiveCircle={index}
+          onCircleClick={(circleIndex) => handleCircleClick(circleIndex)}
         />
       </div>
     </>
@@ -96,15 +104,28 @@ function RightArrow({ onRightClick }: RightArrowProps) {
 
 type CircleProps = {
   currentImage: Image;
-  activeCircle: boolean;
-  setActiveCircle: (activeCircle: boolean) => void;
+  index: number;
+  setActiveCircle: (index: number) => void;
+  onCircleClick: (circleIndex: any) => void;
 };
 
-function CircleIndicators({ activeCircle }: CircleProps) {
-  return (
-    <i
-      className={
-        activeCircle ? 'fa-solid fa-circle active' : 'fa-regular fa-circle'
-      }></i>
-  );
+function CircleIndicators({
+  index,
+
+  onCircleClick,
+}: CircleProps) {
+  const circles = [...Array(images.length)].map((_circle, circleIndex) => {
+    const circle =
+      circleIndex === index
+        ? 'fa-solid fa-circle active'
+        : 'fa-regular fa-circle';
+    // if (circleIndex === index) setActiveCircle(circleIndex);
+    return (
+      <i
+        className={circle}
+        key={circleIndex}
+        onClick={(circleIndex) => onCircleClick(circleIndex)}></i>
+    );
+  });
+  return <div>{circles}</div>;
 }
