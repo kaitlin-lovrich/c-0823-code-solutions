@@ -19,13 +19,70 @@ export function Todos() {
   const [error, setError] = useState<unknown>();
 
   /* Implement useEffect to fetch all todos. Hints are at the bottom of the file. */
-  useEffect(() => {}, []);
+  useEffect(() => {
+    async function getAllTodos() {
+      setIsLoading(true);
+      try {
+        const response = await fetch('/api/todos');
+        if (!response.ok) throw new Error('There was an error');
+        const todos = await response.json();
+        setTodos(todos);
+      } catch (err) {
+        console.error(err);
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    getAllTodos();
+  }, []);
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
-  async function addTodo(newTodo: UnsavedTodo) {}
+  async function addTodo(newTodo: UnsavedTodo) {
+    try {
+      const response = await fetch('/api/todos', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newTodo),
+      });
+      if (!response.ok) throw new Error('There was an error');
+      const createdTodo = await response.json();
+      const todosPlus = todos.concat(createdTodo);
+      setTodos(todosPlus);
+    } catch (err) {
+      console.error(err);
+      setError(err);
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   /* Implement toggleCompleted to toggle the completed state of a todo. Hints are at the bottom of the file. */
-  async function toggleCompleted(todoId: number) {}
+  async function toggleCompleted(todoId: number) {
+    try {
+      const matchingTodo = todos.find((todo) => todo.todoId === todoId);
+      const oppositeCompleted = { isCompleted: !matchingTodo?.isCompleted };
+      const response = await fetch(`/api/todos/${todoId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(oppositeCompleted),
+      });
+      if (!response.ok) throw new Error('There was an error');
+      const checkedTodo = await response.json();
+      const updatedChecked = todos.map((todo) => {
+        if (todo.todoId === checkedTodo.todoId) {
+          return checkedTodo;
+        } else {
+          return todo;
+        }
+      });
+      setTodos(updatedChecked);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   if (isLoading) {
     return <div>Loading...</div>;
