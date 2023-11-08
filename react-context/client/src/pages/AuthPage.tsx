@@ -9,11 +9,14 @@ import { AppContext } from '../components/AppContext';
 type Props = {
   action: 'sign-in' | 'sign-up';
 };
+
 export function AuthPage({ action }: Props) {
   const navigate = useNavigate();
   /* TODO: Grab `user` and `handleSignIn` from `AppContext` */
-  const user = undefined;
-  const handleSignIn = () => {};
+  const { user, handleSignIn } = useContext(AppContext);
+
+  // const user = undefined; // No longer need after useContext
+  // const handleSignIn = () => {}; // No longer need after useContext
 
   useEffect(() => {
     if (user) navigate('/');

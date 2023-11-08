@@ -6,8 +6,10 @@ import { AppContext } from './AppContext';
 
 export function NavBar() {
   /* TODO: Grab `user` and `handleSignOut` from `AppContext` */
-  const user = undefined;
-  const handleSignOut = undefined;
+  const { user, handleSignOut } = useContext(AppContext);
+
+  // const user = undefined; // No longer need after useContext
+  // const handleSignOut = undefined; // No longer need after useContext
 
   return (
     <div>
