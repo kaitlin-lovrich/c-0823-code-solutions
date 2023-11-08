@@ -2,28 +2,7 @@
 
 ## Notes
 
-All student notes should be written here.
+call req.get to get a header in express
 
-How to write `Code Examples` in markdown
-
-for JS:
-
-```javascript
-const data = 'Howdy';
-```
-
-for HTML:
-
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
-
-for CSS:
-
-```css
-div {
-  width: 100%;
-}
-```
+Auth0 company - good but expensive middleware you can purchase for a website that needs security
+if there is no authorizatin header, token will be undefined, if there is no bearer, token will be undefined
