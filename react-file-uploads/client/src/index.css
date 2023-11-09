@@ -68,3 +68,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+div.image-div {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  padding: 1rem 0;
+}
+
+img.image-uploaded {
+  width: 100%;
+}
