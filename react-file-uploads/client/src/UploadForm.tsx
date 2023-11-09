@@ -9,6 +9,16 @@ type Image = {
 
 export function UploadForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const response = await fetch('/api/uploads', {
+      method: 'POST',
+      body: formData,
+    });
+    const parsedRes = response.json();
+    if (!parsedRes) console.error('Failed to upload');
+    console.log('parsedRes', parsedRes);
     /* Prevent the browser's default behavior for form submissions.
      * Create a `new` FormData object from the `event`.
      *

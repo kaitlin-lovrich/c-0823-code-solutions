@@ -35,8 +35,19 @@ app.post(
       if (!caption) {
         throw new ClientError(400, 'caption is a required field');
       }
-      const image = req.file;
-      console.log(image);
+      const imageUrl = '/images/' + req.file.filename;
+      if (!imageUrl) throw new ClientError(400, 'url is a required field');
+      console.log(imageUrl);
+      const [url] = imageUrl;
+      const sql = `
+        insert into "images" ("caption", "url")
+        values ($1, $2)
+        returning *;
+      `;
+      const params = [caption, url];
+      const response = await db.query(sql, params);
+      const image = response.rows[0];
+      res.status(201).json(image);
       /* TODO:
        * - create a url for the image by combining '/images/' with req.file.filename
        * - insert the "caption" and "url" into the "images" table
