@@ -73,14 +73,12 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
     if (!user) throw new ClientError(401, "'invalid login' error.");
     const isMatching = await argon2.verify(user.hashedPassword, password);
     if (!isMatching) throw new ClientError(401, "'invalid login' error.");
-    const secret = process.env.TOKEN_SECRET;
-    if (!secret) throw new Error('TOKEN_SECRET not found');
     const payload = {
       userId: user.userId,
       username: user.username,
     };
     console.log(payload);
-    const token = jwt.sign(payload, secret);
+    const token = jwt.sign(payload, hashKey);
     res.status(200).json({ token, user: payload });
 
     /* your code starts here */
