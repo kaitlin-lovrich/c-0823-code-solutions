@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars -- Remove me */
 import { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FaBolt, FaSignOutAlt } from 'react-icons/fa';

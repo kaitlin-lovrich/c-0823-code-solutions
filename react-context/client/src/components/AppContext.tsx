@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext } from 'react';
 import type { Auth, User } from '../lib';
 
 type AppContextValues = {
@@ -13,3 +13,5 @@ export const AppContext = createContext<AppContextValues>({
   handleSignIn: () => undefined,
   handleSignOut: () => undefined,
 });
+
+// removed useContext from import statement because it wasn't being used

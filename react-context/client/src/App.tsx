@@ -46,15 +46,15 @@ export function App() {
    * and pass `contextValue` as the Provider value.
    */
   return (
-    <Routes>
-      <AppContext.Provider value={contextValue}>
+    <AppContext.Provider value={contextValue}>
+      <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<HomePage />} />
           <Route path="sign-in" element={<AuthPage action="sign-in" />} />
           <Route path="sign-up" element={<AuthPage action="sign-up" />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
-      </AppContext.Provider>
-    </Routes>
+      </Routes>
+    </AppContext.Provider>
   );
 }
